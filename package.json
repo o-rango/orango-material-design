@@ -1,14 +1,14 @@
 {
-  "name": "my-name",
+  "name": "orango-material-design",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Orango material design with stenciljs",
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
-  "browser": "dist/mycomponent.js",
+  "browser": "dist/orango-material.js",
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
