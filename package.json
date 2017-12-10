@@ -18,7 +18,8 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "next"
+    "@stencil/core": "next",
+    "material-components-web": "^0.26.0"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
@@ -28,14 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/o-rango/orango-material-design"
   },
-  "author": "Ionic Team",
+  "author": "Orango Team",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
-  "homepage": "https://github.com/ionic-team/stencil",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
