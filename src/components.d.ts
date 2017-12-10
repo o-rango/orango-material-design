@@ -4,34 +4,34 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import { MyComponent as MyComponent } from './components/my-component/my-component';
 
-interface HTMLMyComponentElement extends MyComponent, HTMLElement {
-}
-declare var HTMLMyComponentElement: {
-  prototype: HTMLMyComponentElement;
-  new (): HTMLMyComponentElement;
-};
+import {
+  MyComponent as OButton
+} from './components/o-button/o-button';
+
 declare global {
+  interface HTMLOButtonElement extends OButton, HTMLElement {
+  }
+  var HTMLOButtonElement: {
+    prototype: HTMLOButtonElement;
+    new (): HTMLOButtonElement;
+  };
   interface HTMLElementTagNameMap {
-      "my-component": HTMLMyComponentElement;
+    "o-button": HTMLOButtonElement;
   }
   interface ElementTagNameMap {
-      "my-component": HTMLMyComponentElement;
+    "o-button": HTMLOButtonElement;
   }
   namespace JSX {
-      interface IntrinsicElements {
-          "my-component": JSXElements.MyComponentAttributes;
-      }
+    interface IntrinsicElements {
+      "o-button": JSXElements.OButtonAttributes;
+    }
   }
   namespace JSXElements {
-      export interface MyComponentAttributes extends HTMLAttributes {
-          mode?: string,
-          color?: string,
-        
-          first?: string,
-          last?: string
-      }
+    export interface OButtonAttributes extends HTMLAttributes {
+      first?: string;
+      last?: string;
+    }
   }
 }
 

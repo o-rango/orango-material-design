@@ -1,8 +1,8 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'orango-material',
   generateDistribution: true,
   bundles: [
-    { components: ['my-component'] }
+    { components: ['o-button'] }
   ]
 };
 

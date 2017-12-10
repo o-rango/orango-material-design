@@ -1,8 +1,8 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.scss',
+  tag: 'o-button',
+  styleUrl: 'o-button.scss',
   shadow: true
 })
 export class MyComponent {
