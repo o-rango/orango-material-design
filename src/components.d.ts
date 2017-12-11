@@ -6,30 +6,35 @@
 
 
 import {
-  MdcLinearProgressComponent as OMdcLinearProgress
-} from './components/o-mdc-linear-progress/o-mdc-linear-progress';
+  MdcFabComponent as OMdcFab
+} from './components/o-mdc-fab/o-mdc-fab';
 
 declare global {
-  interface HTMLOMdcLinearProgressElement extends OMdcLinearProgress, HTMLElement {
+  interface HTMLOMdcFabElement extends OMdcFab, HTMLElement {
   }
-  var HTMLOMdcLinearProgressElement: {
-    prototype: HTMLOMdcLinearProgressElement;
-    new (): HTMLOMdcLinearProgressElement;
+  var HTMLOMdcFabElement: {
+    prototype: HTMLOMdcFabElement;
+    new (): HTMLOMdcFabElement;
   };
   interface HTMLElementTagNameMap {
-    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
+    "o-mdc-fab": HTMLOMdcFabElement;
   }
   interface ElementTagNameMap {
-    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
+    "o-mdc-fab": HTMLOMdcFabElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-mdc-linear-progress": JSXElements.OMdcLinearProgressAttributes;
+      "o-mdc-fab": JSXElements.OMdcFabAttributes;
     }
   }
   namespace JSXElements {
-    export interface OMdcLinearProgressAttributes extends HTMLAttributes {
-      
+    export interface OMdcFabAttributes extends HTMLAttributes {
+      name?: string;
+      id?: string;
+      href?: string;
+      mini?: boolean;
+      absolute?: boolean;
+      fixed?: boolean;
     }
   }
 }
