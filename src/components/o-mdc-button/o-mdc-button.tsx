@@ -1,4 +1,5 @@
-import { Component, Element, Prop} from '@stencil/core';
+import { Component, Prop , Element} from '@stencil/core';
+import { MDCRipple } from '@material/ripple'
 
 @Component({
   tag: 'o-mdc-button',
@@ -7,6 +8,9 @@ import { Component, Element, Prop} from '@stencil/core';
 })
 export class MdcButtonComponent {
 
+  private ripple : any;
+
+  @Element() MdcButtonEl: HTMLElement;
   @Prop() href: string;
   @Prop() disabled: boolean;
   @Prop() raised: boolean;
@@ -15,10 +19,18 @@ export class MdcButtonComponent {
   @Prop() dense: boolean;
   @Prop() compact: boolean;
 
+  componentDidLoad() {
+    this.ripple = MDCRipple.attachTo(this.MdcButtonEl.shadowRoot.querySelector('.mdc-button'));
+  }
+
+  componentDidUnload() {
+    this.ripple.destroy();
+  }
+
   render() {
     const TagType = this.href ? 'a' : 'button';
     return (
-      <TagType class="mdc-button">
+      <TagType class="mdc-button mdc-button--raised">
        <slot/>
       </TagType>
     );
