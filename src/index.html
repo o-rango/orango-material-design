@@ -6,19 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Orango Material Components using Stenciljs</title>
     <script src="/build/orango-material.js"></script>
+
+    <style>
+        h2   {font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;}
+    </style>
   </head>
 
   <body>
 
-    <o-mdc-button>
-      Click Here
-    </o-mdc-button>
+    <fieldset>
+      <h2>Buttons demo</h2>
 
-    <o-mdc-button href="sapo.pt">
-      Click 2
-    </o-mdc-button>
+      <o-mdc-button onClick="alert(JSON.stringify(event))" raised>
+        Raised
+       </o-mdc-button>
+
+       <o-mdc-button raised disabled>
+          Raised Disabled
+         </o-mdc-button>
+
+       <o-mdc-button unelevated>
+         Unelevated
+       </o-mdc-button>
+
+       <o-mdc-button stroked>
+         Stroked
+       </o-mdc-button>
+
+       <o-mdc-button raised dense>
+        Dense
+       </o-mdc-button>
+
+       <o-mdc-button raised compact>
+         Compact
+        </o-mdc-button>
+
+        <o-mdc-button raised>
+            <i class="material-icons mdc-button__icon">favorite</i>
+            Button
+        </o-mdc-button>
+
+
+    </fieldset>
 
     <o-mdc-fab>
       Favorite
