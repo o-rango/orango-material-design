@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Orango Material Components using Stenciljs</title>
     <script src="/build/orango-material.js"></script>
 
     <style>
-        h2   {font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;}
+      h2 {
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      }
+
     </style>
   </head>
 
@@ -22,56 +25,66 @@
 
       <o-mdc-button onClick="alert(JSON.stringify(event))" raised>
         Raised
-       </o-mdc-button>
+      </o-mdc-button>
 
-       <o-mdc-button raised disabled>
-          Raised Disabled
-         </o-mdc-button>
+      <o-mdc-button raised disabled>
+        Raised Disabled
+      </o-mdc-button>
 
-       <o-mdc-button unelevated>
-         Unelevated
-       </o-mdc-button>
+      <o-mdc-button unelevated>
+        Unelevated
+      </o-mdc-button>
 
-       <o-mdc-button stroked>
-         Stroked
-       </o-mdc-button>
+      <o-mdc-button stroked>
+        Stroked
+      </o-mdc-button>
 
-       <o-mdc-button raised dense>
+      <o-mdc-button raised dense>
         Dense
-       </o-mdc-button>
+      </o-mdc-button>
 
-       <o-mdc-button raised compact>
-         Compact
-        </o-mdc-button>
+      <o-mdc-button raised compact>
+        Compact
+      </o-mdc-button>
 
-        <o-mdc-button raised>
-            <i class="material-icons mdc-button__icon">favorite</i>
-            Button
-        </o-mdc-button>
-
-
-
-
+      <o-mdc-button raised>
+        <i class="material-icons mdc-button__icon">favorite</i>
+        Button
+      </o-mdc-button>
     </fieldset>
+
     <fieldset>
-        <h2>Fabs demo</h2>
-    <o-mdc-fab>
+      <h2>Fabs demo</h2>
+      <o-mdc-fab>
         <i class="material-icons mdc-button__icon">favorite</i>
-    </o-mdc-fab>
+      </o-mdc-fab>
 
-    <o-mdc-fab mini>
+      <o-mdc-fab mini>
         <i class="material-icons mdc-button__icon">favorite</i>
-    </o-mdc-fab>
+      </o-mdc-fab>
 
-    <o-mdc-fab fixed>
+      <o-mdc-fab fixed>
         <i class="material-icons mdc-button__icon">favorite</i>
-    </o-mdc-fab>
+      </o-mdc-fab>
 
     </fieldset>
 
+    <fieldset>
+      <h2>Toolbar demo</h2>
+      <o-mdc-toolbar fixed>
+        <o-mdc-toolbar-section align-end>
+            <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
+            <span class="mdc-toolbar__title">Title</span>
+        </o-mdc-toolbar-section>
+      </o-mdc-toolbar>
+    </fieldset>
 
-    <o-mdc-linear-progress>
-    </o-mdc-linear-progress>
+    <fieldset>
+      <h2>Progress bar demo</h2>
+      <o-mdc-linear-progress>
+      </o-mdc-linear-progress>
+    </fieldset>
+
 
   </body>
 
