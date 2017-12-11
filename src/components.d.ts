@@ -6,31 +6,30 @@
 
 
 import {
-  MyComponent as OButton
-} from './components/o-button/o-button';
+  MdcLinearProgressComponent as OMdcLinearProgress
+} from './components/o-mdc-linear-progress/o-mdc-linear-progress';
 
 declare global {
-  interface HTMLOButtonElement extends OButton, HTMLElement {
+  interface HTMLOMdcLinearProgressElement extends OMdcLinearProgress, HTMLElement {
   }
-  var HTMLOButtonElement: {
-    prototype: HTMLOButtonElement;
-    new (): HTMLOButtonElement;
+  var HTMLOMdcLinearProgressElement: {
+    prototype: HTMLOMdcLinearProgressElement;
+    new (): HTMLOMdcLinearProgressElement;
   };
   interface HTMLElementTagNameMap {
-    "o-button": HTMLOButtonElement;
+    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
   }
   interface ElementTagNameMap {
-    "o-button": HTMLOButtonElement;
+    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-button": JSXElements.OButtonAttributes;
+      "o-mdc-linear-progress": JSXElements.OMdcLinearProgressAttributes;
     }
   }
   namespace JSXElements {
-    export interface OButtonAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
+    export interface OMdcLinearProgressAttributes extends HTMLAttributes {
+      
     }
   }
 }
