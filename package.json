@@ -14,7 +14,7 @@
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
-    "test": "jest --no-cache",
+    "test": "jest --no-cache --coverage",
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
@@ -55,6 +55,7 @@
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
+    "coveralls": "^3.0.0",
     "jest": "^21.2.1"
   },
   "repository": {
