@@ -7,4 +7,28 @@
 ###  WIP  Adapters to implement Material Design Components
 
 
+> Planned Components
+
+- [x] button 
+- [] card 
+- [] checkbox 
+- [] dialog 
+- [] drawer 
+- [x] fab 
+- [] grid-list 
+- [] icon-toggle 
+- [] layout-grid 
+- [] linear-progress 
+- [] list 
+- [] menu 
+- [] radio 
+- [] select 
+- [] slider 
+- [] snackbar 
+- [] switch 
+- [] tabs 
+- [] textfield 
+- [] toolbar 
+- [] typography
+
 
