@@ -6,30 +6,37 @@
 
 
 import {
-  MdcSelectComponent as OMdcSelect
-} from './components/o-mdc-select/o-mdc-select';
+  MdcCheckboxComponent as OMdcCheckbox
+} from './components/o-mdc-checkbox/o-mdc-checkbox';
 
 declare global {
-  interface HTMLOMdcSelectElement extends OMdcSelect, HTMLElement {
+  interface HTMLOMdcCheckboxElement extends OMdcCheckbox, HTMLElement {
   }
-  var HTMLOMdcSelectElement: {
-    prototype: HTMLOMdcSelectElement;
-    new (): HTMLOMdcSelectElement;
+  var HTMLOMdcCheckboxElement: {
+    prototype: HTMLOMdcCheckboxElement;
+    new (): HTMLOMdcCheckboxElement;
   };
   interface HTMLElementTagNameMap {
-    "o-mdc-select": HTMLOMdcSelectElement;
+    "o-mdc-checkbox": HTMLOMdcCheckboxElement;
   }
   interface ElementTagNameMap {
-    "o-mdc-select": HTMLOMdcSelectElement;
+    "o-mdc-checkbox": HTMLOMdcCheckboxElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-mdc-select": JSXElements.OMdcSelectAttributes;
+      "o-mdc-checkbox": JSXElements.OMdcCheckboxAttributes;
     }
   }
   namespace JSXElements {
-    export interface OMdcSelectAttributes extends HTMLAttributes {
-      
+    export interface OMdcCheckboxAttributes extends HTMLAttributes {
+      label?: string;
+      name?: string;
+      id?: string;
+      checked?: boolean;
+      indeterminate?: boolean;
+      disabled?: boolean;
+      alignEnd?: boolean;
+      value?: string;
     }
   }
 }
