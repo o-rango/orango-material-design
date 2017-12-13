@@ -21,7 +21,6 @@ export class MdcToolbarComponent {
 
     componentDidLoad() {
       this.foundation = MDCToolbar.attachTo(this.MdcToolbarEl.shadowRoot.querySelector('.mdc-toolbar'));
-      debugger;
 
     }
 

@@ -6,201 +6,37 @@
 
 
 import {
-  MdcButtonComponent as OMdcButton
-} from './components/o-mdc-button/o-mdc-button';
+  MdcCheckboxComponent as OMdcCheckbox
+} from './components/o-mdc-checkbox/o-mdc-checkbox';
 
 declare global {
-  interface HTMLOMdcButtonElement extends OMdcButton, HTMLElement {
+  interface HTMLOMdcCheckboxElement extends OMdcCheckbox, HTMLElement {
   }
-  var HTMLOMdcButtonElement: {
-    prototype: HTMLOMdcButtonElement;
-    new (): HTMLOMdcButtonElement;
+  var HTMLOMdcCheckboxElement: {
+    prototype: HTMLOMdcCheckboxElement;
+    new (): HTMLOMdcCheckboxElement;
   };
   interface HTMLElementTagNameMap {
-    "o-mdc-button": HTMLOMdcButtonElement;
+    "o-mdc-checkbox": HTMLOMdcCheckboxElement;
   }
   interface ElementTagNameMap {
-    "o-mdc-button": HTMLOMdcButtonElement;
+    "o-mdc-checkbox": HTMLOMdcCheckboxElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-mdc-button": JSXElements.OMdcButtonAttributes;
+      "o-mdc-checkbox": JSXElements.OMdcCheckboxAttributes;
     }
   }
   namespace JSXElements {
-    export interface OMdcButtonAttributes extends HTMLAttributes {
+    export interface OMdcCheckboxAttributes extends HTMLAttributes {
+      label?: string;
       name?: string;
       id?: string;
-      href?: string;
+      checked?: boolean;
+      indeterminate?: boolean;
       disabled?: boolean;
-      raised?: boolean;
-      unelevated?: boolean;
-      stroked?: boolean;
-      dense?: boolean;
-      compact?: boolean;
-    }
-  }
-}
-
-
-import {
-  MdcFabComponent as OMdcFab
-} from './components/o-mdc-fab/o-mdc-fab';
-
-declare global {
-  interface HTMLOMdcFabElement extends OMdcFab, HTMLElement {
-  }
-  var HTMLOMdcFabElement: {
-    prototype: HTMLOMdcFabElement;
-    new (): HTMLOMdcFabElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-mdc-fab": HTMLOMdcFabElement;
-  }
-  interface ElementTagNameMap {
-    "o-mdc-fab": HTMLOMdcFabElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-mdc-fab": JSXElements.OMdcFabAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface OMdcFabAttributes extends HTMLAttributes {
-      name?: string;
-      id?: string;
-      href?: string;
-      mini?: boolean;
-      absolute?: boolean;
-      fixed?: boolean;
-    }
-  }
-}
-
-
-import {
-  MdcLinearProgressComponent as OMdcLinearProgress
-} from './components/o-mdc-linear-progress/o-mdc-linear-progress';
-
-declare global {
-  interface HTMLOMdcLinearProgressElement extends OMdcLinearProgress, HTMLElement {
-  }
-  var HTMLOMdcLinearProgressElement: {
-    prototype: HTMLOMdcLinearProgressElement;
-    new (): HTMLOMdcLinearProgressElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
-  }
-  interface ElementTagNameMap {
-    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-mdc-linear-progress": JSXElements.OMdcLinearProgressAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface OMdcLinearProgressAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  MdcToolbarSectionComponent as OMdcToolbarSection
-} from './components/o-mdc-toolbar/o-mdc-toolbar-section';
-
-declare global {
-  interface HTMLOMdcToolbarSectionElement extends OMdcToolbarSection, HTMLElement {
-  }
-  var HTMLOMdcToolbarSectionElement: {
-    prototype: HTMLOMdcToolbarSectionElement;
-    new (): HTMLOMdcToolbarSectionElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-mdc-toolbar-section": HTMLOMdcToolbarSectionElement;
-  }
-  interface ElementTagNameMap {
-    "o-mdc-toolbar-section": HTMLOMdcToolbarSectionElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-mdc-toolbar-section": JSXElements.OMdcToolbarSectionAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface OMdcToolbarSectionAttributes extends HTMLAttributes {
-      alignStart?: boolean;
       alignEnd?: boolean;
-      shrinkToFit?: boolean;
-    }
-  }
-}
-
-
-import {
-  MdcToolbarTitleComponent as OMdcToolbarTitle
-} from './components/o-mdc-toolbar/o-mdc-toolbar-title';
-
-declare global {
-  interface HTMLOMdcToolbarTitleElement extends OMdcToolbarTitle, HTMLElement {
-  }
-  var HTMLOMdcToolbarTitleElement: {
-    prototype: HTMLOMdcToolbarTitleElement;
-    new (): HTMLOMdcToolbarTitleElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-mdc-toolbar-title": HTMLOMdcToolbarTitleElement;
-  }
-  interface ElementTagNameMap {
-    "o-mdc-toolbar-title": HTMLOMdcToolbarTitleElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-mdc-toolbar-title": JSXElements.OMdcToolbarTitleAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface OMdcToolbarTitleAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  MdcToolbarComponent as OMdcToolbar
-} from './components/o-mdc-toolbar/o-mdc-toolbar';
-
-declare global {
-  interface HTMLOMdcToolbarElement extends OMdcToolbar, HTMLElement {
-  }
-  var HTMLOMdcToolbarElement: {
-    prototype: HTMLOMdcToolbarElement;
-    new (): HTMLOMdcToolbarElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-mdc-toolbar": HTMLOMdcToolbarElement;
-  }
-  interface ElementTagNameMap {
-    "o-mdc-toolbar": HTMLOMdcToolbarElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-mdc-toolbar": JSXElements.OMdcToolbarAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface OMdcToolbarAttributes extends HTMLAttributes {
-      name?: string;
-      id?: string;
-      fixed?: boolean;
-      waterfall?: boolean;
-      fixedLastrow?: boolean;
-      flexible?: boolean;
-      flexibleDefault?: boolean;
+      value?: string;
     }
   }
 }
