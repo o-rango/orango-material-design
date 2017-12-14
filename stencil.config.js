@@ -2,6 +2,8 @@ exports.config = {
   namespace: 'orango-material',
   generateDistribution: true,
   bundles: [
+    { components: ['o-mdc-theme'] },
+    { components: ['o-mdc-form-field'] },
     { components: ['o-mdc-button'] },
     { components: ['o-mdc-radio'] },
     { components: ['o-mdc-checkbox'] },
