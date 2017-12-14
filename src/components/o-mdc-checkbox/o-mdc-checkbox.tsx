@@ -1,8 +1,7 @@
 import {Component, Prop, Element, CssClassMap , Event, EventEmitter} from '@stencil/core';
 import {MDCCheckboxFoundation} from "@material/checkbox/";
-import {MDCFormField, MDCFormFieldFoundation} from '@material/form-field';
 import {getCorrectEventName} from '@material/animation'
-import {RippleAdapter} from '../utils/ripple-adapter'
+import {RippleBase} from './base'
 
 //import {MDCFormField, MDCFormFieldFoundation} from '@material/form-field';
 //import { MDCCheckboxFoundation } from '@material/checkbox/foundation';
@@ -36,10 +35,6 @@ export class MdcCheckboxComponent {
       const inputEl = this.el.shadowRoot.querySelector('input');
       const rootEl = this.el.shadowRoot.querySelector('.mdc-checkbox');
 
-      /*const formEl = this.el.shadowRoot.querySelector('.mdc-form-field');
-      this.mdcFormField = new MDCFormField(formEl);
-      */
-
       this.mdcCheckbox = new MDCCheckboxFoundation({
         addClass: (className: string) => {
           rootEl.classList.add(className)
@@ -72,13 +67,14 @@ export class MdcCheckboxComponent {
       this.mdcCheckbox.setChecked(this.checked);
       this.mdcCheckbox.setDisabled(this.disabled);
       this.mdcCheckbox.setIndeterminate(this.indeterminate);
-      this.mdcRipple = new RippleAdapter(rootEl, {
+
+      this.mdcRipple = new RippleBase(rootEl, inputEl, {
         isUnbounded: () => true,
         isSurfaceActive: () => true,
-        registerInteractionHandler: (evt: string, handler: EventListener) => {
+        registerInteractionHandler: (evt, handler) => {
           rootEl.addEventListener(evt, handler)
         },
-        deregisterInteractionHandler: (evt: string, handler:EventListener) => {
+        deregisterInteractionHandler: (evt, handler) => {
           rootEl.removeEventListener(evt, handler)
         },
         computeBoundingRect: () => {
@@ -93,26 +89,25 @@ export class MdcCheckboxComponent {
             height: DIM
           }
         }
-      });
+      })
+
       this.mdcRipple.init();
   }
 
-  componentWillUnload() {
+  componentDidUnload() {
     this.mdcCheckbox.destroy();
     this.mdcRipple.destroy();
-    this.mdcFormField.destroy();
   }
 
   render() {
-
+    /*
     const _uid : string = `${this.id}-checkbox-label`;
     const formFieldClasses : CssClassMap = {
       'mdc-form-field': this.label.length > 0,
       'mdc-form-field--align-end': this.label.length > 0 && this.alignEnd
-    }
+    }*/
 
     return (
-      <div class={formFieldClasses}>
         <div class="mdc-checkbox">
           <input type="checkbox" id={this.id}  class="mdc-checkbox__native-control"/>
           <div class="mdc-checkbox__background">
@@ -126,8 +121,6 @@ export class MdcCheckboxComponent {
             <div class="mdc-checkbox__mixedmark"></div>
           </div>
         </div>
-        <label>{this.label}</label>
-     </div>
     );
   }
 }

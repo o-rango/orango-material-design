@@ -1,7 +1,7 @@
 import { MDCRippleFoundation, util } from '@material/ripple';
-export class RippleAdapter extends MDCRippleFoundation {
+export class RippleBase extends MDCRippleFoundation {
 
-  constructor(el, options) {
+  constructor(vm,childEl, options) {
   super(
     Object.assign(
     {
@@ -27,29 +27,30 @@ export class RippleAdapter extends MDCRippleFoundation {
       return false;
       },
       computeBoundingRect: () => {
-      return el.getBoundingClientRect();
+      return vm.getBoundingClientRect();
       },
       isSurfaceActive: () => {
-      return el[util.getMatchesProperty(HTMLElement.prototype)](':active');
+      return vm[util.getMatchesProperty(HTMLElement.prototype)](':active');
       },
       isSurfaceDisabled: () => {
-      return el.disabled;
+      return vm.disabled;
       },
-      addClass(className:string) {
-      el.classList.add(className);
+      addClass(className) {
+      vm.classList.add(className);
       },
       // assumes a data 'classes' property on the root element
-      removeClass(className:string) {
-      el.classList.remove(className);
+      removeClass(className) {
+      vm.classList.remove(className);
       },
-      registerInteractionHandler: (evt:string, handler : EventListener) => {
-      el.addEventListener(evt, handler);
+      registerInteractionHandler: (evt, handler) => {
+      vm.addEventListener(evt, handler);
       },
-      deregisterInteractionHandler: (evt:string, handler: EventListener) => {
-      el.removeEventListener(evt, handler);
+      deregisterInteractionHandler: (evt, handler) => {
+      vm.removeEventListener(evt, handler);
       },
       updateCssVariable: (varName: string, value: string) => {
-      el.style.setProperty(varName, value);
+      console.log(vm.style);
+      vm.style.setProperty(varName, value);
       }
     },
     options

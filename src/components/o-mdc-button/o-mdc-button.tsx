@@ -21,7 +21,7 @@ export class MdcButtonComponent {
   @Prop()dense : boolean;
   @Prop()compact : boolean;
 
-  componentWillUnload() {
+  componentDidLoad() {
     this.ripple = MDCRipple.attachTo(this.MdcButtonEl.shadowRoot.querySelector('.mdc-button'));
   }
 
