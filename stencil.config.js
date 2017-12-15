@@ -3,6 +3,7 @@ exports.config = {
   generateDistribution: true,
   bundles: [
     { components: ['o-mdc-theme'] },
+    { components: ['o-mdc-snackbar'] },
     { components: ['o-mdc-form-field'] },
     { components: ['o-mdc-button'] },
     { components: ['o-mdc-radio'] },
