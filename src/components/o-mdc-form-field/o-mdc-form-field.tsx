@@ -11,8 +11,11 @@ export class MdcFormFieldComponent {
   @Prop()label : string;
 
   componentDidLoad() {
-    const rootEl = this.el.shadowRoot.querySelector('.mdc-form-field');
-    this.mdcFormField = new MDCFormField(rootEl);
+    const rootEl = this
+      .el
+      .shadowRoot
+      .querySelector('.mdc-form-field');
+    this.mdcFormField = new MDCFormField(rootEl.parentElement);
   }
 
   componentDidUnload() {

@@ -22,8 +22,12 @@ export class MdcButtonComponent {
   @Prop()compact : boolean;
 
   componentDidLoad() {
+<<<<<<< HEAD
     const rootEl = this.el.shadowRoot.querySelector('.mdc-button');
     this.ripple = new MDCRipple(rootEl);
+=======
+    this.ripple = MDCRipple.attachTo(this.MdcButtonEl.shadowRoot.querySelector('.mdc-button'));
+>>>>>>> master
   }
 
   componentDidUnload() {

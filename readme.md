@@ -7,14 +7,18 @@
 ###  WIP  Adapters to implement Material Design Components
 
 
-> Planned Components
+Acceptance criteria : 
+ - *Tests*
+ - *Demo*
+ - *Docs*
 
-- [x] button 
+> Planned Components
+- [] button `Implemented not completed`
 - [] card 
-- [] checkbox 
+- [] checkbox `Implemented not completed`
 - [] dialog 
 - [] drawer 
-- [x] fab 
+- [] fab `Implemented not completed`
 - [] grid-list 
 - [] icon-toggle 
 - [] layout-grid 
@@ -24,11 +28,11 @@
 - [] radio 
 - [] select 
 - [] slider 
-- [] snackbar 
+- [] snackbar `Implemented not completed`
 - [] switch 
 - [] tabs 
 - [] textfield 
-- [] toolbar 
+- [] toolbar `Implemented not completed`
 - [] typography
 
 
