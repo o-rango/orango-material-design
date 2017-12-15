@@ -1,2 +1,9 @@
-@import '@material/button/mdc-button';
-:host {}
+@import "@material/button/mdc-button";
+
+:host{
+.mdc-button {
+  .mdc-icon {
+    @extend .mdc-button__icon;
+  }
+}
+}
