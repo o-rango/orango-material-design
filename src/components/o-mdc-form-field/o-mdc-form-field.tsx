@@ -8,6 +8,7 @@ export class MdcFormFieldComponent {
 
   @Element()el : HTMLElement;
   @Prop()alignEnd : boolean;
+  @Prop()label : string;
 
   componentDidLoad() {
     const rootEl = this.el.shadowRoot.querySelector('.mdc-form-field');
@@ -23,11 +24,12 @@ export class MdcFormFieldComponent {
 
     const formFieldClasses : CssClassMap = {
       'mdc-form-field': true,
-      'mdc-form-field--align-end': true
+      'mdc-form-field--align-end': this.alignEnd
     }
-
     return (
-      <div class={formFieldClasses}><slot/>
-      <label>RECREIDO</label></div>);
+      <div class={formFieldClasses}>
+      <slot/>
+      <label>{this.label}</label>
+      </div>);
   }
 }

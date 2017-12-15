@@ -10,7 +10,7 @@ export class MdcButtonComponent {
 
   private ripple : any;
 
-  @Element()MdcButtonEl : HTMLElement;
+  @Element()el : HTMLElement;
   @Prop()name : string;
   @Prop()id : string;
   @Prop()href : string;
@@ -21,8 +21,9 @@ export class MdcButtonComponent {
   @Prop()dense : boolean;
   @Prop()compact : boolean;
 
-  componentWillUnload() {
-    this.ripple = MDCRipple.attachTo(this.MdcButtonEl.shadowRoot.querySelector('.mdc-button'));
+  componentDidLoad() {
+    const rootEl = this.el.shadowRoot.querySelector('.mdc-button');
+    this.ripple = new MDCRipple(rootEl);
   }
 
   componentDidUnload() {
