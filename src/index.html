@@ -116,6 +116,35 @@
         <o-mdc-checkbox label="Checkbox" id="check2" name="check3" align-end></o-mdc-checkbox>
         <o-mdc-checkbox label="Checkbox" id="check3" name="check4" disabled></o-mdc-checkbox>
     </fieldset>
+
+    <fieldset>
+      <h2>Snackbar demo</h2>
+      <o-mdc-button onClick="ShowSnackBar(event)" raised>
+        Show Snackbar
+      </o-mdc-button>
+       <o-mdc-snackbar align-start></o-mdc-snackbar>
+
+    </fieldset>
   </body>
+
+  <script>
+    const showOb = {
+        message : 'RICA',
+        actionText : 'Fechar',
+        actionHandler : (event)=> console.log(event),
+        multiline : false,
+        actionOnBottom : true
+
+      }
+
+   function ShowSnackBar(evt){
+      document.querySelector('o-mdc-snackbar').show(showOb);
+   }
+
+   function ShowSnackBarEvent(evt){
+    var event = new CustomEvent('o-mdc-snack-bar-show', showOb);
+   }
+
+  </script>
 
 </html>
