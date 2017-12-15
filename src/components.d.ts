@@ -6,37 +6,38 @@
 
 
 import {
-  MdcCheckboxComponent as OMdcCheckbox
-} from './components/o-mdc-checkbox/o-mdc-checkbox';
+  MdcButtonComponent as OMdcButton
+} from './components/o-mdc-button/o-mdc-button';
 
 declare global {
-  interface HTMLOMdcCheckboxElement extends OMdcCheckbox, HTMLElement {
+  interface HTMLOMdcButtonElement extends OMdcButton, HTMLElement {
   }
-  var HTMLOMdcCheckboxElement: {
-    prototype: HTMLOMdcCheckboxElement;
-    new (): HTMLOMdcCheckboxElement;
+  var HTMLOMdcButtonElement: {
+    prototype: HTMLOMdcButtonElement;
+    new (): HTMLOMdcButtonElement;
   };
   interface HTMLElementTagNameMap {
-    "o-mdc-checkbox": HTMLOMdcCheckboxElement;
+    "o-mdc-button": HTMLOMdcButtonElement;
   }
   interface ElementTagNameMap {
-    "o-mdc-checkbox": HTMLOMdcCheckboxElement;
+    "o-mdc-button": HTMLOMdcButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-mdc-checkbox": JSXElements.OMdcCheckboxAttributes;
+      "o-mdc-button": JSXElements.OMdcButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface OMdcCheckboxAttributes extends HTMLAttributes {
-      label?: string;
+    export interface OMdcButtonAttributes extends HTMLAttributes {
       name?: string;
       id?: string;
-      checked?: boolean;
-      indeterminate?: boolean;
+      href?: string;
       disabled?: boolean;
-      alignEnd?: boolean;
-      value?: string;
+      raised?: boolean;
+      unelevated?: boolean;
+      stroked?: boolean;
+      dense?: boolean;
+      compact?: boolean;
     }
   }
 }

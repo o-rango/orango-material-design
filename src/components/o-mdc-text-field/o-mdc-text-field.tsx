@@ -1,4 +1,4 @@
-import {Component} from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'o-mdc-text-field',
@@ -9,9 +9,9 @@ export class MdcTextFieldComponent {
   render() {
     return (
       <div class="mdc-text-field">
-        <input type="text" id="my-text-field" class="mdc-text-field__input"></input>
+        <input type="text" id="my-text-field" class="mdc-text-field__input" />
         <label class="mdc-text-field__label">Hint text</label>
-        <div class="mdc-text-field__bottom-line"></div>
+        <div class="mdc-text-field__bottom-line" />
       </div>
     );
   }
