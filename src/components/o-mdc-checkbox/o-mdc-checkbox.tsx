@@ -109,7 +109,7 @@ export class MdcCheckboxComponent {
     this.mdcRipple.init();
   }
 
-  componentWillUnload() {
+  componentDidUnload() {
     this.mdcCheckbox.destroy();
     this.mdcRipple.destroy();
     this.mdcFormField.destroy();

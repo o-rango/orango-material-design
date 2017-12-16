@@ -19,6 +19,12 @@
   </head>
 
   <body>
+    <o-mdc-toolbar fixed>
+      <o-mdc-toolbar-section align-end>
+          <i href="#" class="material-icons mdc-toolbar__menu-icon">menu</i>
+      </o-mdc-toolbar-section>
+    </o-mdc-toolbar>
+
 
     <fieldset>
       <h2>Buttons demo</h2>
@@ -70,16 +76,6 @@
     </fieldset>
 
     <fieldset>
-      <h2>Toolbar demo</h2>
-      <o-mdc-toolbar fixed>
-        <o-mdc-toolbar-section align-end>
-            <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
-            <span class="mdc-toolbar__title">Title</span>
-        </o-mdc-toolbar-section>
-      </o-mdc-toolbar>
-    </fieldset>
-
-    <fieldset>
       <h2>Progress bar demo</h2>
       <o-mdc-linear-progress>
       </o-mdc-linear-progress>
@@ -105,14 +101,13 @@
 
     <fieldset>
       <h2>Checkbox demo</h2>
+      <o-mdc-form-field label="My Check Box">
+        <o-mdc-checkbox indeterminate label="Checkbox" id="check1" name="check1"></o-mdc-checkbox>
+      </o-mdc-form-field>
 
-        <o-mdc-form-field label="My Check Box">
-          <o-mdc-checkbox indeterminate label="Checkbox" id="check1" name="check1"></o-mdc-checkbox>
-        </o-mdc-form-field>
-
-        <o-mdc-form-field label="My Check Box 2 " align-end>
-          <o-mdc-checkbox indeterminate label="Checkbox" id="check2" name="check1"></o-mdc-checkbox>
-        </o-mdc-form-field>
+      <o-mdc-form-field label="My Check Box 2 " align-end>
+        <o-mdc-checkbox indeterminate label="Checkbox" id="check2" name="check1"></o-mdc-checkbox>
+      </o-mdc-form-field>
         <o-mdc-checkbox label="Checkbox" id="check2" name="check3" align-end></o-mdc-checkbox>
         <o-mdc-checkbox label="Checkbox" id="check3" name="check4" disabled></o-mdc-checkbox>
     </fieldset>

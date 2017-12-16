@@ -6,6 +6,44 @@
 
 
 import {
+  MdcButtonComponent as OMdcButton
+} from './components/o-mdc-button/o-mdc-button';
+
+declare global {
+  interface HTMLOMdcButtonElement extends OMdcButton, HTMLElement {
+  }
+  var HTMLOMdcButtonElement: {
+    prototype: HTMLOMdcButtonElement;
+    new (): HTMLOMdcButtonElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-button": HTMLOMdcButtonElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-button": HTMLOMdcButtonElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-button": JSXElements.OMdcButtonAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcButtonAttributes extends HTMLAttributes {
+      name?: string;
+      id?: string;
+      href?: string;
+      disabled?: boolean;
+      raised?: boolean;
+      unelevated?: boolean;
+      stroked?: boolean;
+      dense?: boolean;
+      compact?: boolean;
+    }
+  }
+}
+
+
+import {
   MdcCheckboxComponent as OMdcCheckbox
 } from './components/o-mdc-checkbox/o-mdc-checkbox';
 
@@ -37,6 +75,364 @@ declare global {
       id?: string;
       value?: string;
       alignEnd?: boolean;
+    }
+  }
+}
+
+
+import {
+  MdcFabComponent as OMdcFab
+} from './components/o-mdc-fab/o-mdc-fab';
+
+declare global {
+  interface HTMLOMdcFabElement extends OMdcFab, HTMLElement {
+  }
+  var HTMLOMdcFabElement: {
+    prototype: HTMLOMdcFabElement;
+    new (): HTMLOMdcFabElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-fab": HTMLOMdcFabElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-fab": HTMLOMdcFabElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-fab": JSXElements.OMdcFabAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcFabAttributes extends HTMLAttributes {
+      name?: string;
+      id?: string;
+      href?: string;
+      mini?: boolean;
+      absolute?: boolean;
+      fixed?: boolean;
+    }
+  }
+}
+
+
+import {
+  MdcFormFieldComponent as OMdcFormField
+} from './components/o-mdc-form-field/o-mdc-form-field';
+
+declare global {
+  interface HTMLOMdcFormFieldElement extends OMdcFormField, HTMLElement {
+  }
+  var HTMLOMdcFormFieldElement: {
+    prototype: HTMLOMdcFormFieldElement;
+    new (): HTMLOMdcFormFieldElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-form-field": HTMLOMdcFormFieldElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-form-field": HTMLOMdcFormFieldElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-form-field": JSXElements.OMdcFormFieldAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcFormFieldAttributes extends HTMLAttributes {
+      alignEnd?: boolean;
+      label?: string;
+    }
+  }
+}
+
+
+import {
+  MdcLinearProgressComponent as OMdcLinearProgress
+} from './components/o-mdc-linear-progress/o-mdc-linear-progress';
+
+declare global {
+  interface HTMLOMdcLinearProgressElement extends OMdcLinearProgress, HTMLElement {
+  }
+  var HTMLOMdcLinearProgressElement: {
+    prototype: HTMLOMdcLinearProgressElement;
+    new (): HTMLOMdcLinearProgressElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-linear-progress": HTMLOMdcLinearProgressElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-linear-progress": JSXElements.OMdcLinearProgressAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcLinearProgressAttributes extends HTMLAttributes {
+      id?: string;
+      open?: boolean;
+      accent?: boolean;
+      indeterminate?: boolean;
+      reverse?: boolean;
+      progress?: number;
+      buffer?: number;
+    }
+  }
+}
+
+
+import {
+  MdcRadioComponent as OMdcRadio
+} from './components/o-mdc-radio/o-mdc-radio';
+
+declare global {
+  interface HTMLOMdcRadioElement extends OMdcRadio, HTMLElement {
+  }
+  var HTMLOMdcRadioElement: {
+    prototype: HTMLOMdcRadioElement;
+    new (): HTMLOMdcRadioElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-radio": HTMLOMdcRadioElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-radio": HTMLOMdcRadioElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-radio": JSXElements.OMdcRadioAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcRadioAttributes extends HTMLAttributes {
+      name?: string;
+      id?: string;
+      checked?: boolean;
+      value?: string;
+      disabled?: boolean;
+      label?: string;
+      alignEnd?: boolean;
+    }
+  }
+}
+
+
+import {
+  MdcSelectComponent as OMdcSelect
+} from './components/o-mdc-select/o-mdc-select';
+
+declare global {
+  interface HTMLOMdcSelectElement extends OMdcSelect, HTMLElement {
+  }
+  var HTMLOMdcSelectElement: {
+    prototype: HTMLOMdcSelectElement;
+    new (): HTMLOMdcSelectElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-select": HTMLOMdcSelectElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-select": HTMLOMdcSelectElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-select": JSXElements.OMdcSelectAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcSelectAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MdcSnackbarComponent as OMdcSnackbar
+} from './components/o-mdc-snackbar/o-mdc-snackbar';
+
+declare global {
+  interface HTMLOMdcSnackbarElement extends OMdcSnackbar, HTMLElement {
+  }
+  var HTMLOMdcSnackbarElement: {
+    prototype: HTMLOMdcSnackbarElement;
+    new (): HTMLOMdcSnackbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-snackbar": HTMLOMdcSnackbarElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-snackbar": HTMLOMdcSnackbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-snackbar": JSXElements.OMdcSnackbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcSnackbarAttributes extends HTMLAttributes {
+      alignStart?: boolean;
+      actionOnBottom?: boolean;
+      dismissesOnAction?: boolean;
+    }
+  }
+}
+
+
+import {
+  MdcTextFieldComponent as OMdcTextField
+} from './components/o-mdc-text-field/o-mdc-text-field';
+
+declare global {
+  interface HTMLOMdcTextFieldElement extends OMdcTextField, HTMLElement {
+  }
+  var HTMLOMdcTextFieldElement: {
+    prototype: HTMLOMdcTextFieldElement;
+    new (): HTMLOMdcTextFieldElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-text-field": HTMLOMdcTextFieldElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-text-field": HTMLOMdcTextFieldElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-text-field": JSXElements.OMdcTextFieldAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcTextFieldAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MdcThemeComponent as OMdcTheme
+} from './components/o-mdc-theme/o-mdc-theme';
+
+declare global {
+  interface HTMLOMdcThemeElement extends OMdcTheme, HTMLElement {
+  }
+  var HTMLOMdcThemeElement: {
+    prototype: HTMLOMdcThemeElement;
+    new (): HTMLOMdcThemeElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-theme": HTMLOMdcThemeElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-theme": HTMLOMdcThemeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-theme": JSXElements.OMdcThemeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcThemeAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MdcToolbarSectionComponent as OMdcToolbarSection
+} from './components/o-mdc-toolbar/o-mdc-toolbar-section';
+
+declare global {
+  interface HTMLOMdcToolbarSectionElement extends OMdcToolbarSection, HTMLElement {
+  }
+  var HTMLOMdcToolbarSectionElement: {
+    prototype: HTMLOMdcToolbarSectionElement;
+    new (): HTMLOMdcToolbarSectionElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-toolbar-section": HTMLOMdcToolbarSectionElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-toolbar-section": HTMLOMdcToolbarSectionElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-toolbar-section": JSXElements.OMdcToolbarSectionAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcToolbarSectionAttributes extends HTMLAttributes {
+      alignStart?: boolean;
+      alignEnd?: boolean;
+      shrinkToFit?: boolean;
+    }
+  }
+}
+
+
+import {
+  MdcToolbarTitleComponent as OMdcToolbarTitle
+} from './components/o-mdc-toolbar/o-mdc-toolbar-title';
+
+declare global {
+  interface HTMLOMdcToolbarTitleElement extends OMdcToolbarTitle, HTMLElement {
+  }
+  var HTMLOMdcToolbarTitleElement: {
+    prototype: HTMLOMdcToolbarTitleElement;
+    new (): HTMLOMdcToolbarTitleElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-toolbar-title": HTMLOMdcToolbarTitleElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-toolbar-title": HTMLOMdcToolbarTitleElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-toolbar-title": JSXElements.OMdcToolbarTitleAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcToolbarTitleAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MdcToolbarComponent as OMdcToolbar
+} from './components/o-mdc-toolbar/o-mdc-toolbar';
+
+declare global {
+  interface HTMLOMdcToolbarElement extends OMdcToolbar, HTMLElement {
+  }
+  var HTMLOMdcToolbarElement: {
+    prototype: HTMLOMdcToolbarElement;
+    new (): HTMLOMdcToolbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-mdc-toolbar": HTMLOMdcToolbarElement;
+  }
+  interface ElementTagNameMap {
+    "o-mdc-toolbar": HTMLOMdcToolbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-mdc-toolbar": JSXElements.OMdcToolbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OMdcToolbarAttributes extends HTMLAttributes {
+      name?: string;
+      id?: string;
+      fixed?: boolean;
+      waterfall?: boolean;
+      fixedLastrow?: boolean;
+      flexible?: boolean;
+      flexibleDefault?: boolean;
     }
   }
 }
