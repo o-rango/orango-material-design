@@ -1,5 +1,6 @@
-import {Component , Prop , Element , CssClassMap} from '@stencil/core';
-import {MDCToolbar, MDCToolbarFoundation} from '@material/toolbar';
+import {Component , Prop , Element , CssClassMap , EventEmitter} from '@stencil/core';
+import {MDCToolbar, MDCToolbarFoundation ,util} from '@material/toolbar';
+
 
 @Component({
   tag: 'o-mdc-toolbar',
@@ -20,8 +21,62 @@ export class MdcToolbarComponent {
     @Prop()flexibleDefault : boolean;
 
     componentDidLoad() {
-      this.foundation = MDCToolbar.attachTo(this.MdcToolbarEl.shadowRoot.querySelector('.mdc-toolbar'));
+      const rootEl = this.MdcToolbarEl.shadowRoot.querySelector('.mdc-toolbar');
+      this.foundation = new MDCToolbarFoundation({
+        addClass: (className) => {
+          rootEl.classList.add(className);
+        },
+        removeClass: (className) => {
+          rootEl.classList.remove(className);
+        },
+        hasClass: (className) => {
+          return rootEl.classList.contains(className)
+        },
+        registerScrollHandler: (handler) => {
+          window.addEventListener('scroll', handler, util.applyPassive())
+        },
+        deregisterScrollHandler: (handler) => {
+          window.removeEventListener('scroll', handler, util.applyPassive())
+        },
+        registerResizeHandler: (handler) => {
+          window.addEventListener('resize', handler)
+        },
+        deregisterResizeHandler: (handler) => {
+          window.removeEventListener('resize', handler)
+        },
+        getViewportWidth: () => {
+          return window.innerWidth
+        },
+        getViewportScrollY: () => {
+          return window.pageYOffset
+        },
+        getOffsetHeight: () => {
+          return this.MdcToolbarEl.offsetHeight
+        },
 
+        getFirstRowElementOffsetHeight: () => {
+          let el = rootEl.querySelector(MDCToolbarFoundation.strings.FIRST_ROW_SELECTOR)
+          return (el) ? el.offsetHeight : undefined
+        },
+        notifyChange: (evtData) => {
+          //this.$emit('change', evtData)
+        },
+        setStyle: (styleProperty, value) => {
+          rootEl.setAttribute('style', styleProperty = value );
+        },
+        setStyleForTitleElement: (property, value) => {
+          let el = rootEl.querySelector(MDCToolbarFoundation.strings.TITLE_SELECTOR);
+          if (el) el.style.setProperty(property, value)
+        },
+        setStyleForFlexibleRowElement: (property, value) => {
+          let el = rootEl.querySelector(MDCToolbarFoundation.strings.FIRST_ROW_SELECTOR);
+          if (el) el.style.setProperty(property, value)
+        },
+        setStyleForFixedAdjustElement: (styleProperty, value) => {
+          rootEl.setAttribute('style', styleProperty = value );
+        }
+      })
+      this.foundation.init();
     }
 
     componentDidUnload() {
@@ -39,11 +94,11 @@ export class MdcToolbarComponent {
     }
 
     return (
-      <div class={toolbarClasses}>
+      <header class={toolbarClasses}>
       <div class="mdc-toolbar__row">
         <slot/>
       </div>
-     </div>
+     </header>
     );
   }
 }

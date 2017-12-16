@@ -116,12 +116,6 @@ export class MdcCheckboxComponent {
   }
 
   render() {
-    const _uid: string = `${this.id}-checkbox-label`;
-    const formFieldClasses: CssClassMap = {
-      'mdc-form-field': this.label.length > 0,
-      'mdc-form-field--align-end': this.label.length > 0 && this.alignEnd
-    };
-
     return (
         <div class="mdc-checkbox">
           <input
