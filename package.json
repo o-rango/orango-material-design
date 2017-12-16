@@ -1,5 +1,5 @@
 {
-  "name": "orango-material-design",
+  "name": "@o-rango/orango-material-design",
   "version": "0.0.1",
   "description": "Orango material design with stenciljs",
   "main": "dist/collection/index.js",
@@ -66,7 +66,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/o-rango/orango-material-design"
+    "url": "git+https://github.com/o-rango/orango-material-design.git"
   },
   "author": "Orango Team",
   "license": "MIT",
@@ -86,5 +86,9 @@
       "json",
       "jsx"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/o-rango/orango-material-design/issues"
+  },
+  "homepage": "https://github.com/o-rango/orango-material-design#readme"
 }
