@@ -2,6 +2,7 @@ exports.config = {
   namespace: 'orango-material',
   generateDistribution: true,
   bundles: [
+    { components: ['o-mdc-list' , 'o-mdc-list-item'] },
     { components: ['o-mdc-theme'] },
     { components: ['o-mdc-snackbar'] },
     { components: ['o-mdc-form-field'] },
