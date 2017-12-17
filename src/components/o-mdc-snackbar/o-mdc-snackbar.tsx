@@ -27,7 +27,7 @@ export class MdcSnackbarComponent {
 
   @Method()
   close(payload) {
-    this.mdcSnackbar.close();
+    this.mdcSnackbar.destroy();
   }
 
   componentDidLoad() {
