@@ -5,5 +5,4 @@ describe('o-mdc-fab', () => {
   it('should build', () => {
     expect(new MdcFabComponent()).toBeTruthy();
   });
-
 });
