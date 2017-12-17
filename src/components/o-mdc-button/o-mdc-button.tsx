@@ -1,5 +1,5 @@
-import {Component, Prop, Element, CssClassMap} from '@stencil/core';
-import {MDCRipple} from '@material/ripple'
+import { Component, Prop, Element, CssClassMap } from '@stencil/core';
+import { MDCRipple } from '@material/ripple';
 
 @Component({
   tag: 'o-mdc-button',
@@ -7,19 +7,18 @@ import {MDCRipple} from '@material/ripple'
   shadow: true
 })
 export class MdcButtonComponent {
+  private ripple: any;
 
-  private ripple : any;
-
-  @Element()el : HTMLElement;
-  @Prop()name : string;
-  @Prop()id : string;
-  @Prop()href : string;
-  @Prop()disabled : boolean;
-  @Prop()raised : boolean;
-  @Prop()unelevated : boolean;
-  @Prop()stroked : boolean;
-  @Prop()dense : boolean;
-  @Prop()compact : boolean;
+  @Element() el: HTMLElement;
+  @Prop() name: string;
+  @Prop() id: string;
+  @Prop() href: string;
+  @Prop() disabled: boolean;
+  @Prop() raised: boolean;
+  @Prop() unelevated: boolean;
+  @Prop() stroked: boolean;
+  @Prop() dense: boolean;
+  @Prop() compact: boolean;
 
   componentDidLoad() {
     const rootEl = this.el.shadowRoot.querySelector('.mdc-button');
@@ -31,20 +30,25 @@ export class MdcButtonComponent {
   }
 
   render() {
-
-    const buttonClasses : CssClassMap = {
-      'mdc-button' : true,
+    const buttonClasses: CssClassMap = {
+      'mdc-button': true,
       'mdc-button--raised': this.raised,
       'mdc-button--unelevated': this.unelevated,
       'mdc-button--stroked': this.stroked,
       'mdc-button--dense': this.dense,
       'mdc-button--compact': this.compact
-    }
+    };
 
     const TagType = this.href ? 'a' : 'button';
     return (
-      <TagType class={buttonClasses} disabled={this.disabled} href={this.href} name={this.name} id={this.id}>
-        <slot/>
+      <TagType
+        class={buttonClasses}
+        disabled={this.disabled}
+        href={this.href}
+        name={this.name}
+        id={this.id}
+      >
+        <slot />
       </TagType>
     );
   }

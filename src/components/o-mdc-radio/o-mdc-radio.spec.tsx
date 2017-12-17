@@ -5,5 +5,4 @@ describe('o-mdc-radio', () => {
   it('should build', () => {
     expect(new MdcRadioComponent()).toBeTruthy();
   });
-
 });

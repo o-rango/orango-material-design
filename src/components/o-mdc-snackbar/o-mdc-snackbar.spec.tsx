@@ -5,5 +5,4 @@ describe('o-mdc-snackbar', () => {
   it('should build', () => {
     expect(new MdcSnackbarComponent()).toBeTruthy();
   });
-
 });

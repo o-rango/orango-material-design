@@ -5,5 +5,4 @@ describe('o-mdc-checkbox', () => {
   it('should build', () => {
     expect(new MdcCheckboxComponent()).toBeTruthy();
   });
-
 });

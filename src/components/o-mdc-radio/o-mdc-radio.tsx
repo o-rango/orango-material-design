@@ -56,7 +56,6 @@ export class MdcRadioComponent {
               class="mdc-radio__native-control"
               type="radio"
               id="ex0-default-radio1"
-              checked
               name="ex0-default"
             />
             <div class="mdc-radio__background">

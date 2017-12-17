@@ -5,5 +5,4 @@ describe('o-mdc-select', () => {
   it('should build', () => {
     expect(new MdcSelectComponent()).toBeTruthy();
   });
-
 });

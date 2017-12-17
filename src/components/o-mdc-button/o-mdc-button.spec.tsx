@@ -5,5 +5,4 @@ describe('o-mdc-button', () => {
   it('should build', () => {
     expect(new MdcButtonComponent()).toBeTruthy();
   });
-
 });

@@ -25,7 +25,6 @@ export class MdcSnackbarComponent {
     this.mdcSnackbar.show(payload);
   }
 
-
   componentDidLoad() {
     const rootEl = this.el.shadowRoot.querySelector('.mdc-snackbar');
     this.mdcSnackbar = new MDCSnackbar(rootEl);

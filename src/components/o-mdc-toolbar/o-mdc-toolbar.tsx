@@ -102,20 +102,21 @@ export class MdcToolbarComponent {
       'mdc-toolbar--waterfall': this.waterfall,
       'mdc-toolbar--fixed-lastrow-only': this.fixedLastrow,
       'mdc-toolbar--flexible': this.flexible,
-      'mdc-toolbar--flexible-default-behavior':this.flexible && this.flexibleDefault
+      'mdc-toolbar--flexible-default-behavior':
+        this.flexible && this.flexibleDefault
     };
 
     return (
       <header class={toolbarClasses}>
         <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-              <slot name="left"/>
+          <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <slot name="left" />
           </section>
           <section class="mdc-toolbar__section">
-              <slot name="center"/>
+            <slot name="center" />
           </section>
           <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
-              <slot name="right"/>
+            <slot name="right" />
           </section>
         </div>
       </header>

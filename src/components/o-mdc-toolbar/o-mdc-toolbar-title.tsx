@@ -1,4 +1,4 @@
-import {Component} from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'o-mdc-toolbar-title',
@@ -8,7 +8,7 @@ export class MdcToolbarTitleComponent {
   render() {
     return (
       <a class="mdc-toolbar-title mdc-toolbar__title">
-      <slot/>
+        <slot />
       </a>
     );
   }
