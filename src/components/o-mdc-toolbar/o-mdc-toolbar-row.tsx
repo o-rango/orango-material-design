@@ -2,8 +2,7 @@ import {Component} from '@stencil/core';
 
 @Component({
   tag: 'o-mdc-toolbar-row',
-  styleUrl: 'o-mdc-toolbar.scss',
-  shadow: true
+  shadow: false
 })
 export class MdcToolbarRowComponent {
   render() {

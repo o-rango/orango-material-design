@@ -2,7 +2,7 @@ import {Component} from '@stencil/core';
 
 @Component({
   tag: 'o-mdc-toolbar-title',
-  shadow: true
+  shadow: false
 })
 export class MdcToolbarTitleComponent {
   render() {

@@ -1,13 +1,5 @@
 @import '@material/toolbar/mdc-toolbar';
 :host {
-  .mdc-toolbar-wrapper{
-    display:flex;
-    width:100%;
-
-    .mdc-toolbar-fixed-adjust {
-      width:100%;
-    }
-  }
 
   .mdc-toolbar__title {
     color: inherit;

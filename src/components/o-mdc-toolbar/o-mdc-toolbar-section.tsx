@@ -2,8 +2,7 @@ import {Component, Prop , CssClassMap} from '@stencil/core';
 
 @Component({
   tag: 'o-mdc-toolbar-section',
-  styleUrl: 'o-mdc-toolbar.scss',
-  shadow: true
+  shadow: false
 })
 export class MdcToolbarSectionComponent {
 
