@@ -6,30 +6,36 @@
 
 
 import {
-  MdcToolbarRowComponent as OMdcToolbarRow
-} from './components/o-mdc-toolbar/o-mdc-toolbar-row';
+  MdcToolbarComponent as OMdcToolbar
+} from './components/o-mdc-toolbar/o-mdc-toolbar';
 
 declare global {
-  interface HTMLOMdcToolbarRowElement extends OMdcToolbarRow, HTMLElement {
+  interface HTMLOMdcToolbarElement extends OMdcToolbar, HTMLElement {
   }
-  var HTMLOMdcToolbarRowElement: {
-    prototype: HTMLOMdcToolbarRowElement;
-    new (): HTMLOMdcToolbarRowElement;
+  var HTMLOMdcToolbarElement: {
+    prototype: HTMLOMdcToolbarElement;
+    new (): HTMLOMdcToolbarElement;
   };
   interface HTMLElementTagNameMap {
-    "o-mdc-toolbar-row": HTMLOMdcToolbarRowElement;
+    "o-mdc-toolbar": HTMLOMdcToolbarElement;
   }
   interface ElementTagNameMap {
-    "o-mdc-toolbar-row": HTMLOMdcToolbarRowElement;
+    "o-mdc-toolbar": HTMLOMdcToolbarElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-mdc-toolbar-row": JSXElements.OMdcToolbarRowAttributes;
+      "o-mdc-toolbar": JSXElements.OMdcToolbarAttributes;
     }
   }
   namespace JSXElements {
-    export interface OMdcToolbarRowAttributes extends HTMLAttributes {
-      
+    export interface OMdcToolbarAttributes extends HTMLAttributes {
+      fixed?: boolean;
+      fixedLastrow?: boolean;
+      flexible?: boolean;
+      flexibleDefault?: boolean;
+      id?: string;
+      name?: string;
+      waterfall?: boolean;
     }
   }
 }
