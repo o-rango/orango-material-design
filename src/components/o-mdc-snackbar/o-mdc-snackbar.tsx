@@ -25,10 +25,6 @@ export class MdcSnackbarComponent {
     this.mdcSnackbar.show(payload);
   }
 
-  @Method()
-  close(payload) {
-    this.mdcSnackbar.destroy();
-  }
 
   componentDidLoad() {
     const rootEl = this.el.shadowRoot.querySelector('.mdc-snackbar');
