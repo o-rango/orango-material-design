@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-material-design",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "description": "Orango material design with stenciljs",
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
