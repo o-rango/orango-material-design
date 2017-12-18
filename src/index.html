@@ -20,7 +20,28 @@
   <body>
     <o-mdc-toolbar fixed>
       <div slot="left"> <i class="material-icons mdc-button__icon">menu</i></div>
-      <div slot="center"> <i class="material-icons mdc-button__icon">favorite</i></div>
+      <div slot="center">
+          <o-mdc-select>
+              <li class="mdc-list-item" role="option" tabindex="0">
+                  Bread, Cereal, Rice, and Pasta
+                </li>
+                <li class="mdc-list-item" role="option" tabindex="0">
+                  Vegetables
+                </li>
+                <li class="mdc-list-item" role="option" tabindex="0">
+                  Fruit
+                </li>
+                <li class="mdc-list-item" role="option" tabindex="0">
+                  Milk, Yogurt, and Cheese
+                </li>
+                <li class="mdc-list-item" role="option" tabindex="0">
+                  Meat, Poultry, Fish, Dry Beans, Eggs, and Nuts
+                </li>
+                <li class="mdc-list-item" role="option" tabindex="0">
+                  Fats, Oils, and Sweets
+                </li>
+          </o-mdc-select>
+      </div>
       <div slot="right" class="spacer">
          <i class="material-icons mdc-button__icon">smartphone</i>
          <i class="material-icons mdc-button__icon">face</i>

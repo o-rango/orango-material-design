@@ -1,4 +1,5 @@
 import { Component, Prop, Element, CssClassMap } from '@stencil/core';
+import { MDCSelect , MDCSelectFoundation } from '@material/select';
 
 @Component({
   tag: 'o-mdc-select',
@@ -6,6 +7,20 @@ import { Component, Prop, Element, CssClassMap } from '@stencil/core';
   shadow: true
 })
 export class MdcSelectComponent {
+  private mdcSelect: any;
+
+  @Element() el: HTMLElement;
+  @Prop() tabIndex: number;
+  @Prop() selectedTextContent : any;
+
+  componentDidLoad() {
+    const rootEl = this.el.shadowRoot.querySelector('.mdc-select');
+    this.mdcSelect = new MDCSelect(rootEl);
+  }
+
+  componentDidUnload() {
+    this.mdcSelect.destroy();
+  }
   render() {
     return (
       <div class="mdc-select" role="listbox" tabindex="0">
