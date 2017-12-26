@@ -4,165 +4,101 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Orango Material Components using Stenciljs</title>
     <script src="/build/orango-material.js"></script>
 
-    <style>
-      h2 {
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-      }
-    </style>
   </head>
 
   <body>
-    <o-mdc-toolbar fixed>
-      <div slot="left"> <i class="material-icons mdc-button__icon">menu</i></div>
-      <div slot="center">
-          <o-mdc-select>
-              <li class="mdc-list-item" role="option" tabindex="0">
-                  Bread, Cereal, Rice, and Pasta
-                </li>
-                <li class="mdc-list-item" role="option" tabindex="0">
-                  Vegetables
-                </li>
-                <li class="mdc-list-item" role="option" tabindex="0">
-                  Fruit
-                </li>
-                <li class="mdc-list-item" role="option" tabindex="0">
-                  Milk, Yogurt, and Cheese
-                </li>
-                <li class="mdc-list-item" role="option" tabindex="0">
-                  Meat, Poultry, Fish, Dry Beans, Eggs, and Nuts
-                </li>
-                <li class="mdc-list-item" role="option" tabindex="0">
-                  Fats, Oils, and Sweets
-                </li>
-          </o-mdc-select>
-      </div>
-      <div slot="right" class="spacer">
-         <i class="material-icons mdc-button__icon">smartphone</i>
-         <i class="material-icons mdc-button__icon">face</i>
-      </div>
-    </o-mdc-toolbar>
+    <o-demo-bar name="Material Demo">
+      <!--includes <script src="/build/orango-material.js"></script> includes-->
+      <o-demo-case name="Buttons Demo">
+        <o-mdc-button onClick="alert(JSON.stringify(event))" raised>
+          Raised
+        </o-mdc-button>
+
+        <o-mdc-button raised disabled>
+          Raised Disabled
+        </o-mdc-button>
+
+        <o-mdc-button unelevated>
+          Unelevated
+        </o-mdc-button>
+
+        <o-mdc-button stroked>
+          Stroked
+        </o-mdc-button>
+
+        <o-mdc-button raised dense>
+          Dense
+        </o-mdc-button>
+
+        <o-mdc-button raised compact>
+          Compact
+        </o-mdc-button>
+
+        <o-mdc-button raised>
+          <i class="material-icons mdc-button__icon">favorite</i>
+          Button
+        </o-mdc-button>
+      </o-demo-case>
+
+      <o-demo-case name="Fabs Demo">
+        <o-mdc-fab>
+          <i class="material-icons mdc-button__icon">favorite</i>
+        </o-mdc-fab>
+
+        <o-mdc-fab mini>
+          <i class="material-icons mdc-button__icon">favorite</i>
+        </o-mdc-fab>
+
+        <o-mdc-fab fixed>
+          <i class="material-icons mdc-button__icon">favorite</i>
+        </o-mdc-fab>
+      </o-demo-case>
+
+      <o-demo-case name="Snack Bar demo">
+        <o-mdc-button onClick="ShowSnackBar(event)" raised>
+          Show Snackbar
+        </o-mdc-button>
+        <o-mdc-snackbar align-start></o-mdc-snackbar>
+        <script>
+          const data = {
+            "productKey": "SSSHTQ_8.1.0",
+            "isDisqusEnabled": true
+          }
+
+          const showOb = {
+            message: JSON.stringify(data),
+            actionText: 'Fechar',
+            actionHandler: (event) => console.log(event),
+            multiline: false,
+            actionOnBottom: true
+
+          }
+
+          function ShowSnackBar(evt) {
+            document.querySelector('o-mdc-snackbar').show(showOb);
+          }
+
+          function ShowSnackBarEvent(evt) {
+            var event = new CustomEvent('o-mdc-snack-bar-show', showOb);
+          }
+
+        </script>
+      </o-demo-case>
+
+      <o-demo-case name="Text Field demo">
+        <o-mdc-text-field></o-mdc-text-field>
+      </o-demo-case>
+
+      <o-demo-case name="Progress bar demo">
+        <o-mdc-linear-progress>
+        </o-mdc-linear-progress>
+      </o-demo-case>
 
 
-    <fieldset>
-      <h2>Buttons demo</h2>
-
-      <o-mdc-button onClick="alert(JSON.stringify(event))" raised>
-        Raised
-      </o-mdc-button>
-
-      <o-mdc-button raised disabled>
-        Raised Disabled
-      </o-mdc-button>
-
-      <o-mdc-button unelevated>
-        Unelevated
-      </o-mdc-button>
-
-      <o-mdc-button stroked>
-        Stroked
-      </o-mdc-button>
-
-      <o-mdc-button raised dense>
-        Dense
-      </o-mdc-button>
-
-      <o-mdc-button raised compact>
-        Compact
-      </o-mdc-button>
-
-      <o-mdc-button raised>
-        <i class="material-icons mdc-button__icon">favorite</i>
-        Button
-      </o-mdc-button>
-    </fieldset>
-
-    <fieldset>
-      <h2>Fabs demo</h2>
-      <o-mdc-fab>
-        <i class="material-icons mdc-button__icon">favorite</i>
-      </o-mdc-fab>
-
-      <o-mdc-fab mini>
-        <i class="material-icons mdc-button__icon">favorite</i>
-      </o-mdc-fab>
-
-      <o-mdc-fab fixed>
-        <i class="material-icons mdc-button__icon">favorite</i>
-      </o-mdc-fab>
-
-    </fieldset>
-
-    <fieldset>
-      <h2>Progress bar demo</h2>
-      <o-mdc-linear-progress>
-      </o-mdc-linear-progress>
-    </fieldset>
-
-    <fieldset>
-      <h2>Text field demo</h2>
-      <o-mdc-text-field></o-mdc-text-field>
-    </fieldset>
-
-    <fieldset>
-      <h2>Select demo</h2>
-      <!-- <o-mdc-select></o-mdc-select> -->
-    </fieldset>
-
-
-    <fieldset>
-      <h2>Radio demo</h2>
-      <div class="mdc-radio">
-        <!-- <o-mdc-radio label="Radio1" id="r1" name="radios"></o-mdc-radio> -->
-      </div>
-    </fieldset>
-
-    <!-- <fieldset>
-      <h2>Checkbox demo</h2>
-      <o-mdc-form-field label="My Check Box">
-        <o-mdc-checkbox indeterminate label="Checkbox" id="check1" name="check1"></o-mdc-checkbox>
-      </o-mdc-form-field>
-
-      <o-mdc-form-field label="My Check Box 2 " align-end>
-        <o-mdc-checkbox indeterminate label="Checkbox" id="check2" name="check1"></o-mdc-checkbox>
-      </o-mdc-form-field>
-    </fieldset> -->
-
-    <fieldset>
-      <h2>Snackbar demo</h2>
-      <o-mdc-button onClick="ShowSnackBar(event)" raised>
-        Show Snackbar
-      </o-mdc-button>
-       <o-mdc-snackbar align-start></o-mdc-snackbar>
-
-    </fieldset>
+    </o-demo-bar>
   </body>
-
-  <script>
-    const data = {"productKey":"SSSHTQ_8.1.0","isDisqusEnabled":true}
-
-    const showOb = {
-        message : JSON.stringify(data),
-        actionText : 'Fechar',
-        actionHandler : (event)=> console.log(event),
-        multiline : false,
-        actionOnBottom : true
-
-      }
-
-   function ShowSnackBar(evt){
-      document.querySelector('o-mdc-snackbar').show(showOb);
-   }
-
-   function ShowSnackBarEvent(evt){
-    var event = new CustomEvent('o-mdc-snack-bar-show', showOb);
-   }
-
-  </script>
 
 </html>
