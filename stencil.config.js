@@ -1,6 +1,6 @@
 exports.config = {
-  namespace: 'orango-material',
-  generateDistribution: false,
+  namespace: 'orango-material-design',
+  generateDistribution: true,
   bundles: [
     { components: ['o-mdc-theme'] },
     { components: ['o-mdc-snackbar'] },
@@ -15,7 +15,6 @@ exports.config = {
     { components: ['o-mdc-toolbar', 'o-mdc-toolbar-row','o-mdc-toolbar-title' , 'o-mdc-toolbar-section'] }
   ],
   collections : [
-    { name : '@o-rango/orango-demo-tools'}
   ],
   sassConfig: {
     includePaths: ['node_modules']
