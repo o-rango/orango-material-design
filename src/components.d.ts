@@ -4,6 +4,8 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
+import '@o-rango/orango-demo-tools';
+
 
 import {
   MdcButtonComponent as OMdcButton
