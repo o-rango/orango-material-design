@@ -2,13 +2,13 @@
   "name": "@o-rango/orango-material-design",
   "version": "0.0.2-beta",
   "description": "Orango material design with stenciljs",
-  "main": "dist/collection/index.js",
-  "types": "dist/collection/index.d.ts",
+  "main": "dist/orango-material-design.js",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
-  "browser": "dist/orango-material.js",
+  "browser": "dist/orango-material-design.js",
   "scripts": {
     "publish": "npm publish --access=public",
     "build": "stencil build",
@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.35",
+    "@o-rango/orango-demo-tools": "0.0.1-2",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.8",
