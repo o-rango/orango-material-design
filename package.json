@@ -50,7 +50,7 @@
     "@material/theme": "^0.27.0",
     "@material/toolbar": "^0.28.0",
     "@material/typography": "^0.3.0",
-    "material-components-web": "^0.27.0"
+    "material-components-web": "^0.28.0"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.38",
