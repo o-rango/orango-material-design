@@ -33,7 +33,7 @@
     "coveralls": "3.0.0",
     "jest": "22.2.1",
     "tslint": "5.9.1",
-    "tslint-react": "3.4.0"
+    "tslint-react": "3.6.0"
   },
   "repository": {
     "type": "git",
