@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@stencil/core": "next",
-    "material-components-web": "^0.34.0"
+    "material-components-web": "^0.37.0"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.39",
