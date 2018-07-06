@@ -23,7 +23,7 @@
     "material-components-web": "^0.34.0"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.39",
+    "@babel/core": "7.0.0-beta.52",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "22.1.1",
